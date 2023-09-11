@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link re = "stylesheet" href = "style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <input type = "text" placeholder = "vards" id = "vards">
+            <input type = "text" placeholder = "uzvards" id = "uzvards">
+            <button onclick = "accept()">Iesniegt</button>
+            <p id = "success"></p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function accept(){
+        event.preventDefault();
+
+        let name = $('#vards').val();
+        let surname = $('#uzvards').val();
+        let success = document.getElementById("success");
+
+        success.innerText = (name + " " + surname);
+
+    };
+    </script>
+    
+</body>
+</html>
